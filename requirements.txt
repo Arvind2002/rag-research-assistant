@@ -1,0 +1,6 @@
+arxiv
+pinecone
+sentence-transformers
+langchain
+python-dotenv
+tiktoken
