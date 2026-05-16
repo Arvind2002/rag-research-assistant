@@ -5,3 +5,6 @@ langchain
 python-dotenv
 tiktoken
 groq
+ragas
+datasets
+openai
