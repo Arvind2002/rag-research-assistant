@@ -88,7 +88,7 @@ streamlit run app.py
 ---
 
 ## Project structure
-
+```
 ├── ingest.py        # arXiv ingestion + Pinecone upsert
 ├── retriever.py     # Semantic search against vector store
 ├── generator.py     # Groq/Llama generation with context
@@ -96,7 +96,7 @@ streamlit run app.py
 ├── evaluate.py      # LLM-as-judge eval pipeline
 ├── app.py           # Streamlit frontend
 └── eval_results.csv # Evaluation output
-
+```
 ---
 
-*Built by Arvind Ram · GT MS Analytics '25 · HPE Data Scientist · AAAI Published*
+*Built by Arvind Ram*
