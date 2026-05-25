@@ -72,8 +72,10 @@ pip install -r requirements.txt
 ```
 
 Create a `.env` file:
+```
 PINECONE_API_KEY=your_key
 GROQ_API_KEY=your_key
+```
 
 Ingest papers:
 ```bash
