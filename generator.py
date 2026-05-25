@@ -1,10 +1,18 @@
 import os
 from groq import Groq
 from dotenv import load_dotenv
+import os
+import streamlit as st
 
 load_dotenv()
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+def get_secret(key):
+    try:
+        return st.secrets[key]
+    except:
+        return os.getenv(key)
+
+client = Groq(api_key=get_secret("GROQ_API_KEY"))
 
 def generate(query, chunks):
     # Build context from retrieved chunks

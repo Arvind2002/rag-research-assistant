@@ -2,10 +2,19 @@ import os
 from dotenv import load_dotenv
 from pinecone import Pinecone
 from sentence_transformers import SentenceTransformer
+import os
+import streamlit as st
+from dotenv import load_dotenv
 
 load_dotenv()
 
-pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+def get_secret(key):
+    try:
+        return st.secrets[key]
+    except:
+        return os.getenv(key)
+
+pc = Pinecone(api_key=get_secret("PINECONE_API_KEY"))
 index = pc.Index("arxiv-rag")
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
